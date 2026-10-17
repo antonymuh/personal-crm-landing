@@ -1,0 +1,34 @@
+@import "tailwindcss";
+@import "./tokens.css";
+
+/* The mockup relies on browser defaults: content-box sizing, normal line height, underlined links */
+@layer base {
+  *,
+  ::before,
+  ::after {
+    box-sizing: content-box;
+  }
+  html {
+    line-height: normal;
+  }
+  body {
+    margin: 0;
+    background-color: var(--color-paper);
+  }
+  a {
+    color: var(--color-ink);
+    text-decoration: underline;
+  }
+  a:hover {
+    color: var(--color-blue);
+  }
+  svg {
+    display: inline;
+  }
+}
+
+@utility bg-dotted {
+  background-color: var(--color-paper);
+  background-image: radial-gradient(var(--color-dot) 1.2px, transparent 1.2px);
+  background-size: 22px 22px;
+}

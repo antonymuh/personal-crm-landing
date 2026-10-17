@@ -1,0 +1,120 @@
+/* Design tokens from design/landing.html. Colors, fonts, sizes and shapes live only here. */
+
+@font-face {
+  font-family: "Caveat";
+  font-style: normal;
+  font-weight: 600 700;
+  font-display: swap;
+  src: url("/fonts/caveat-cyrillic.woff2") format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Caveat";
+  font-style: normal;
+  font-weight: 600 700;
+  font-display: swap;
+  src: url("/fonts/caveat-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Golos Text";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("/fonts/golos-text-cyrillic.woff2") format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Golos Text";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("/fonts/golos-text-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Unbounded";
+  font-style: normal;
+  font-weight: 500 900;
+  font-display: swap;
+  src: url("/fonts/unbounded-cyrillic.woff2") format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Unbounded";
+  font-style: normal;
+  font-weight: 500 900;
+  font-display: swap;
+  src: url("/fonts/unbounded-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@theme {
+  /* Palette */
+  --color-*: initial;
+  --color-ink: #1b1b1f;
+  --color-ink-muted: #55534c;
+  --color-paper: #fffef7;
+  --color-white: #ffffff;
+  --color-dot: #e4e1d3;
+  --color-red: #ff4a3d;
+  --color-red-text: #e2382b;
+  --color-yellow: #ffd23f;
+  --color-green: #22b573;
+  --color-cyan: #3ed3e8;
+  --color-blue: #2b59ff;
+  --color-pink: #ff7ac6;
+  --color-accent: var(--color-yellow);
+
+  /* Fonts */
+  --font-*: initial;
+  --font-display: "Unbounded", sans-serif;
+  --font-body: "Golos Text", system-ui, sans-serif;
+  --font-hand: "Caveat", cursive;
+
+  /* Type scale */
+  --text-*: initial;
+  --text-hero: clamp(44px, 6.4vw, 84px);
+  --text-h2: clamp(30px, 3.6vw, 46px);
+  --text-cta: clamp(32px, 4.6vw, 60px);
+
+  /* Layout */
+  --container-page: 1200px;
+  --spacing: 0.25rem;
+  --spacing-cta-y: clamp(40px, 6vw, 80px);
+
+  /* Hand-drawn shapes */
+  --radius-sketch: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  --radius-sketch-alt: 15px 255px 15px 225px / 225px 15px 255px 15px;
+  --radius-blob: 52% 48% 55% 45% / 46% 54% 46% 54%;
+  --radius-blob-alt: 45% 55% 48% 52% / 54% 46% 54% 46%;
+  --radius-window: 14px 6px 12px 8px;
+  --radius-window-bar: 10px 3px 0 0;
+  --radius-cta: 30px 8px 26px 10px / 10px 26px 8px 30px;
+
+  /* Hard offset shadows */
+  --shadow-pop-xs: 3px 3px 0 var(--color-ink);
+  --shadow-pop-sm: 5px 5px 0 var(--color-ink);
+  --shadow-pop: 6px 6px 0 var(--color-ink);
+  --shadow-pop-pink: 6px 6px 0 var(--color-pink);
+  --shadow-pop-yellow: 6px 6px 0 var(--color-yellow);
+  --shadow-pop-cyan: 6px 6px 0 var(--color-cyan);
+  --shadow-window: 10px 10px 0 var(--color-blue);
+  --shadow-cta: 12px 12px 0 var(--color-red);
+}
+
+@theme {
+  /* Fixed font sizes used by the mockup */
+  --text-2xs: 13px;
+  --text-xs: 14px;
+  --text-sm: 15px;
+  --text-base: 16px;
+  --text-md: 17px;
+  --text-lg: 18px;
+  --text-xl: 19px;
+  --text-2xl: 20px;
+  --text-3xl: 21px;
+  --text-4xl: 22px;
+  --text-hand: 28px;
+  --text-hand-lg: 30px;
+}
